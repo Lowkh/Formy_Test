@@ -56,4 +56,5 @@ def test_formy_buttons():
     elem = driver.find_element_by_id('btnGroupDrop1')
     elem.click()
     time.sleep(1)
+    driver.quit()
 '''
