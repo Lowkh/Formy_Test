@@ -5,12 +5,15 @@ from selenium.webdriver.common.keys import Keys
 import pytest
 import time
 
+'''
 @pytest.fixture()
 def driver():
     driver = webdriver.Chrome()
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
+''' 
+driver = webdriver.Chrome()
 
 def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
