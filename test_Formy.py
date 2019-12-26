@@ -1,6 +1,6 @@
 import os
 from selenium import webdriver
-Import chromedriver_binary
+import chromedriver_binary
 from selenium.webdriver.common.keys import Keys
 import pytest
 import time
