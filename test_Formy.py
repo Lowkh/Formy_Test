@@ -13,9 +13,9 @@ def driver():
     driver.quit()
     # create a object for the chrome driver and pass around
 ''' 
-driver = webdriver.Chrome()
 
-def test_formy_buttons(driver):
+def test_formy_buttons():
+    driver = webdriver.Chrome()
     driver.get("https://formy-project.herokuapp.com/buttons")
     assert "Formy" in driver.title
     elem = driver.find_element_by_css_selector('.btn-primary')
