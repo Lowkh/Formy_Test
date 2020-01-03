@@ -16,13 +16,13 @@ def driver():
 
 def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
-
     assert "Formy" in driver.title
     
-def tesT_formy_buttons(driver):
+def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-primary')
     print(elem.text)
+    assert "Secondary" = elem.text
 '''    
     elem = driver.find_element_by_css_selector('.btn-success')
     elem.click()
