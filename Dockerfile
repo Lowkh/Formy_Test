@@ -87,10 +87,10 @@ RUN cd /usr/local/bin \
   && python --version \
   && pip --version
 
-COPY requirements.txt /opt/app/requirements.txt
-WORKDIR /opt/app
+#COPY requirements.txt /opt/app/requirements.txt
+#WORKDIR /opt/app
 RUN pip install -r requirements.txt
-COPY . /opt/app
+#COPY . /opt/app
 
 RUN pytest -v --cov
 # Go back to non-sudo user
