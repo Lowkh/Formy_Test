@@ -14,4 +14,9 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 # set display port to avoid crash
 ENV DISPLAY=:99
 
-RUN apt-get install -y pytest pytest-cov
+FROM ubuntu
+RUN apt-get update -y
+RUN apt-get install -y python python-pip python-dev build-essential libpq-dev
+
+
+RUN pip install -r requirements.txt 
