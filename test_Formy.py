@@ -19,7 +19,7 @@ def driver():
 def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
 
-    assert "Formy" in driver.title
+    assert "Form" in driver.title
     elem = driver.find_element_by_css_selector('.btn-primary')
     elem.click()
     time.sleep(1)
