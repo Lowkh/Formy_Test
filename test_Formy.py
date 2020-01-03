@@ -4,20 +4,16 @@ from selenium.webdriver.common.keys import Keys
 import pytest
 import time
 
-'''
 @pytest.fixture()
 def driver():
     driver = webdriver.Chrome()
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
-''' 
 
-def test_formy_buttons():
-    driver = webdriver.Chrome('/var/lib/jenkins/workspace/Docker_Test/chromedriver.exe') 
+def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
-    driver.quit()
-'''
+
     assert "Formy" in driver.title
     elem = driver.find_element_by_css_selector('.btn-primary')
     elem.click()
