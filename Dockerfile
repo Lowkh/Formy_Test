@@ -14,4 +14,4 @@ RUN unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 # set display port to avoid crash
 ENV DISPLAY=:99
 
-RUN pip install -r requirements.txt --user
+RUN pytest
