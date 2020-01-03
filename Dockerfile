@@ -1,4 +1,3 @@
-USER root
 FROM python:3.8
 
 # install google chrome
@@ -20,5 +19,3 @@ COPY . /opt/app
 
 # set display port to avoid crash
 ENV DISPLAY=:99
-
-USER jenkins
