@@ -17,7 +17,7 @@ def driver():
 def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
 
-    assert "This is the wrong Form" in driver.title
+    assert "Formy" in driver.title
     
 def tesT_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
