@@ -14,7 +14,7 @@ def driver():
 ''' 
 
 def test_formy_buttons():
-    driver = webdriver.Chrome('/var/lib/jenkins/workspace/Docker_Test/') 
+    driver = webdriver.Chrome('/var/lib/jenkins/workspace/Docker_Test/chromedriver.exe') 
     driver.get("https://formy-project.herokuapp.com/buttons")
     driver.quit()
 '''
