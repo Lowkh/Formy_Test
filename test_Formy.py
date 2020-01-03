@@ -14,7 +14,7 @@ def driver():
 ''' 
 
 def test_formy_buttons():
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome('/path/to/chromedriver') 
     driver.get("https://formy-project.herokuapp.com/buttons")
     driver.quit()
 '''
