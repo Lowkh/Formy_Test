@@ -9,8 +9,6 @@ import time
 def driver():
     chrome_options = Options()  
     chrome_options.add_argument("--headless") 
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument("--disable-gpu")
     driver = webdriver.Chrome(options =chrome_options)      
     yield driver
     driver.quit()
@@ -19,7 +17,8 @@ def driver():
 def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
 
-    assert "Form" in driver.title
+    assert "This is the wrong Form" in driver.title
+    
     elem = driver.find_element_by_css_selector('.btn-primary')
     elem.click()
     time.sleep(1)
