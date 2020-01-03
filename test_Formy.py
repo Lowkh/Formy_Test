@@ -19,7 +19,9 @@ def test_formy_buttons(driver):
 
     assert "This is the wrong Form" in driver.title
     
-    elem = driver.find_element_by_css_selector('.btn-primary')
+def tesT_formy_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
+    elem = driver.find_element_by_css_selector('.btn-primary1')
     elem.click()
     time.sleep(1)
     elem = driver.find_element_by_css_selector('.btn-success')
