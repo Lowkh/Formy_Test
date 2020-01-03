@@ -95,3 +95,4 @@ COPY . /opt/app
 # Go back to non-sudo user
 USER jenkins
 
+RUN pytest -v -cov
