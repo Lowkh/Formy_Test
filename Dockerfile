@@ -92,7 +92,8 @@ WORKDIR /opt/app
 RUN pip install -r requirements.txt
 COPY . /opt/app
 
+RUN pytest -v --cov
 # Go back to non-sudo user
 USER jenkins
 
-RUN pytest -v --cov
+
