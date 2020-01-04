@@ -3,7 +3,6 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options  
 import pytest
-import time
 
 @pytest.fixture()
 def driver():
@@ -21,8 +20,9 @@ def test_formy_buttons(driver):
 def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-primary')
-    driver.save_screenshot("Screeny1.png")
+    #driver.save_screenshot("Screeny1.png")
     assert "Primary" == elem.text
+    
 '''    
     elem = driver.find_element_by_css_selector('.btn-success')
     elem.click()
