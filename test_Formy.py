@@ -22,7 +22,7 @@ def test_formy_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-primary')
     driver.save_screenshot("Screeny1.png")
-    assert "Secondary" == elem.text
+    assert "Primary" == elem.text
 '''    
     elem = driver.find_element_by_css_selector('.btn-success')
     elem.click()
