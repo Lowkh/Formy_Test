@@ -75,5 +75,5 @@ def test_formy_warning_buttons(driver):
 def test_formy_warning_buttons(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_id('btnGroupDrop1')
-    assert "Dropdown link 1" == elem.text
+    assert "Dropdown" == elem.text
 
