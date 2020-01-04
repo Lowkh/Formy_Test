@@ -16,16 +16,15 @@ def test_formy_form(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
     assert "Formy" in driver.title
     
-def test_formy_buttons(driver):
-    driver.get("https://formy-project.herokuapp.com/buttons")
+def test_formy_primary_buttons(driver):
+    #driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-primary')
     #driver.save_screenshot("Screeny1.png")
     assert "Primary" == elem.text
     
 '''    
+def test_formy_success_buttons(driver):
     elem = driver.find_element_by_css_selector('.btn-success')
-    elem.click()
-    time.sleep(1)
     elem = driver.find_element_by_css_selector('.btn-info')
     elem.click()
     time.sleep(1)
