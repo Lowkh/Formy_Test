@@ -17,42 +17,63 @@ def test_formy_form(driver):
     assert "Formy" in driver.title
     
 def test_formy_primary_buttons(driver):
-    #driver.get("https://formy-project.herokuapp.com/buttons")
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-primary')
     #driver.save_screenshot("Screeny1.png")
     assert "Primary" == elem.text
     
-'''    
 def test_formy_success_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-success')
+    assert "Success" == elem.text
+
+def test_formy_info_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-info')
-    elem.click()
-    time.sleep(1)
+    assert "Info" == elem.text
+   
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-warning')
-    elem.click()
-    time.sleep(1)
+    assert "Warning" == elem.text
+    
+def test_formy_danger_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-danger')
-    elem.click()
-    time.sleep(1)
+    assert "Danger" == elem.text
+    
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_css_selector('.btn-link')
-    elem.click()
-    time.sleep(1)
+    assert "Link" == elem.text
+    
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_xpath('//button[text()="Left"]')
-    elem.click()
-    time.sleep(1)
+    assert "Left" == elem.text
+    
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_xpath('//button[text()="Middle"]')
-    elem.click()
-    time.sleep(1)
+    assert "Middle" == elem.text
+    
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_xpath('//button[text()="Right"]')
-    elem.click()
-    time.sleep(1)
+    assert "Right" == elem.text
+
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_xpath('//button[text()="1"]')
-    elem.click()
-    time.sleep(1)
+    assert "1" == elem.text
+
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_xpath('//button[text()="2"]')
-    elem.click()
-    time.sleep(1)
+    assert "2" == elem.text
+
+def test_formy_warning_buttons(driver):
+    driver.get("https://formy-project.herokuapp.com/buttons")
     elem = driver.find_element_by_id('btnGroupDrop1')
-    elem.click()
-    time.sleep(1)
-'''
+    assert "Dropdown link 1" == elem.text
+
