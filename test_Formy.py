@@ -12,7 +12,7 @@ def driver():
     driver.quit()
     # create a object for the chrome driver and pass around
 
-def test_formy_buttons(driver):
+def test_formy_form(driver):
     driver.get("https://formy-project.herokuapp.com/buttons")
     assert "Formy" in driver.title
     
