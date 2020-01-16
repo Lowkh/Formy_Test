@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options  
 import pytest
 
+
 @pytest.fixture()
 def driver():
     my_options = Options()  
