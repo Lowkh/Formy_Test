@@ -5,10 +5,10 @@ import pytest
 
 @pytest.fixture()
 def driver():
-    options = Options()  
+    my_options = Options()  
     #options.add_argument("--headless") 
-    options.headless = True
-    driver = webdriver.Chrome(chrome_options=options)      
+    my_options.headless = True
+    driver = webdriver.Chrome(options=my_options)      
     yield driver
     driver.quit()
     # create a object for the chrome driver and pass around
